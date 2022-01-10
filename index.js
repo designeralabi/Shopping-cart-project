@@ -4,6 +4,27 @@ const sideBar = document.querySelector('.side-bar');
 const hamburgerMenu = document.querySelector('.hamburger-menu');
 const crossBtn = document.querySelector('.cross-btn');
 
+
+// Cart increment & Decrement 
+const minusBtn = document.querySelector('.fa-minus');
+const plusBtn = document.querySelector('.fa-plus');
+const counterValue = document.querySelector('#counter');
+const addCartBtn = document.querySelector('#add-to-cart');
+
+
+addCartBtn.addEventListener('click', ()=>{
+    counterValue.textContent = ++counter; 
+});
+
+plusBtn.addEventListener('click', ()=>{
+    counterValue.textContent = ++counter; 
+});
+
+minusBtn.addEventListener('click', ()=>{
+    counterValue.textContent -= 1; 
+});
+
+
 hamburgerMenu.addEventListener('click', () => myFunc('open'));
 crossBtn.addEventListener('click', () => myFunc('close'));
 

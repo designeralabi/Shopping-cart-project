@@ -6,7 +6,7 @@ const crossBtn = document.querySelector('.cross-btn');
 
 
 // Cart increment & Decrement 
-const counterValue = document.querySelector('#counter');;
+const counterValue = document.querySelector('#counter');
 const cartItem = document.querySelector('.items-to-add');
 
 const cartSection = document.querySelector('.cart-section');
@@ -113,7 +113,7 @@ myTarget2.addEventListener('click', function (){
     myTarget3.style.opacity = 1;
     myTarget4.style.opacity = 1;
    
-})
+});
 
 const myTarget3 = document.querySelector('.tbhn3'); // thumbnail image 3
 
@@ -123,7 +123,7 @@ myTarget3.addEventListener('click', function (){
     myTarget1.style.opacity = 1;
     myTarget2.style.opacity = 1;
     myTarget4.style.opacity = 1;myTarget2.style.opacity = 1;
-})
+});
 
 const myTarget4 = document.querySelector('.tbhn4'); // thumbnail image 4
 

@@ -6,23 +6,33 @@ const crossBtn = document.querySelector('.cross-btn');
 
 
 // Cart increment & Decrement 
-const minusBtn = document.querySelector('.fa-minus');
-const plusBtn = document.querySelector('.fa-plus');
-const counterValue = document.querySelector('#counter');
-const addCartBtn = document.querySelector('#add-to-cart');
+const counterValue = document.querySelector('#counter');;
+const cartItem = document.querySelector('.items-to-add');
+
+const cartSection = document.querySelector('.cart-section');
+
+let cartSectionValue = document.createElement('span');
+
+cartItem.addEventListener('click', (evt)=>{
+    evt.stopPropagation();
+ 
+    console.log(evt.target);
+
+    if (evt.target.tagName  === 'BUTTON'){
+        let updatePlusCounter = counterValue.textContent = ++counter;
+
+        cartSectionValue.textContent = updatePlusCounter;
+        cartSection.prepend(cartSectionValue);
 
 
-addCartBtn.addEventListener('click', ()=>{
-    counterValue.textContent = ++counter; 
-});
-
-plusBtn.addEventListener('click', ()=>{
-    counterValue.textContent = ++counter; 
-});
-
-minusBtn.addEventListener('click', ()=>{
-    counterValue.textContent -= 1; 
-});
+    }else if(evt.target.tagName  === 'I'){
+        let updateminusCounter =counterValue.textContent = --counter;
+        cartSectionValue.textContent = updateminusCounter;
+        cartSection.prepend(cartSectionValue);
+    }
+    // console.log(evt.target.tagName);
+    
+}, false);
 
 
 hamburgerMenu.addEventListener('click', () => myFunc('open'));
@@ -125,35 +135,3 @@ myTarget4.addEventListener('click', function (){
     myTarget3.style.opacity = 1;
 
 });
-
-
-
-// auto sliding product image functionality
-setTimeout(function (){
-    image.setAttribute('src', './images/image-product-2.jpg');
-}, 5000);
-setTimeout(function (){
-    image.setAttribute('src', './images/image-product-3.jpg');
-}, 10000);
-setTimeout(function (){
-    image.setAttribute('src', './images/image-product-4.jpg');
-}, 15000);
-setTimeout(function (){
-    image.setAttribute('src', './images/image-product-1.jpg');
-}, 20000);
-
-
-setInterval( () => {
-    setTimeout(function (){
-        image.setAttribute('src', './images/image-product-2.jpg');
-    }, 5000);
-    setTimeout(function (){
-        image.setAttribute('src', './images/image-product-3.jpg');
-    }, 10000);
-    setTimeout(function (){
-        image.setAttribute('src', './images/image-product-4.jpg');
-    }, 15000);
-    setTimeout(function (){
-        image.setAttribute('src', './images/image-product-1.jpg');
-    }, 20000);
-}, 20000);

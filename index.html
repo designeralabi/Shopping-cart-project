@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frontend Mentor | E-commerce product page</title>
+  <!-- <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png"> -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/all.min.css">
+</head>
+  <body>
+    <aside>
+      <div class="side-bar">
+        <i class="fas fa-times cross-btn"></i>
+        <ul class="side-links">
+          <li><a href="#">Collections</a></li>
+          <li><a href="#">Men</a></li>
+          <li><a href="#">Women</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </aside>
+    
+  <header>
+    <nav>
+      <div class="nav-center">
+        <div class="logo">
+          <i class="fas fa-bars hamburger-menu"></i>
+         <a href="#"><img src="images/logo.svg" alt="logo"></a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#">Collections</a></li>
+          <li><a href="#">Men</a></li>
+          <li><a href="#">Women</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="cart-section">
+      <i class="fas fa-shopping-cart"></i>
+      <img src="images/image-avatar.png" alt="avatar" width="30" height="auto">
+    </div>
+  </header>
+
+  
+  <div class="container">
+    <section class="hero-section">
+      <div class="hero-image">
+        <div class="hero-slide-image">
+          <img src="images/image-product-1.jpg" class="hero-img" alt="">
+        </div>
+
+        <div class="hero-slide-image">
+          <img src="images/image-product-2.jpg" alt="" >
+        </div>
+
+        <div class="hero-slide-image">
+          <img src="images/image-product-3.jpg" alt="" >
+        </div>
+
+        <div class="hero-slide-image">
+          <img src="images/image-product-4.jpg" alt="">
+        </div>
+        <div class="btns-container">
+          <i class="fas fa-arrow-left left-arrow"></i>
+          <i class="fas fa-arrow-right right-arrow"></i>
+        </div>
+      </div>
+      <div class="thumbnails">
+        <img src="images/image-product-2-thumbnail.jpg" alt="" class="tbhn1">
+        <img src="images/image-product-3-thumbnail.jpg" alt="" class="tbhn2">
+        <img src="images/image-product-4-thumbnail.jpg" alt="" class="tbhn3">
+        <img src="images/image-product-1-thumbnail.jpg" alt="" class="tbhn4">
+      </div>
+    </section>
+
+    <div class="product-desc-wrapper">
+      <div class="product-desc">
+        <h3>Sneaker Company</h3>
+        <h1>Fall Limited Edition Sneakers</h1>
+        <p>These low-profile sneakers are your perfect casual wear companion. Featuring a 
+        durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+      </div>
+      
+        <!-- pricing goes here -->
+      <div class="pricing-wrapper">
+        <div class="pricing">
+          <h1>$125.00</h1>
+          <span>50%</span>
+        </div>
+        <span class="promo">$250.00</span>
+      </div>
+
+      <!-- add to cart button -->
+      <div class="items-to-add">
+        <div class="add-items">
+          <span><i class="fas fa-minus"></i></span>
+          <span>0</span>
+          <span><i class="fas fa-plus"></i></span>
+        </div>
+          <button type="button" id="add-to-cart">
+            <span><i class="fas fa-shopping-cart"></i></span>
+            Add to cart
+          </button>
+      </div>
+    </div>
+
+  </div>
+  
+  
+    <script src="index.js"></script>
+</body>
+</html>
+
+
+
+
+<!-- 
+
+0
+Add to cart
+
+<div class="attribution">
+  Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+  Coded by <a href="#">Your Name Here</a>.
+</div> -->

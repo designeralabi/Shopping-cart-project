@@ -16,4 +16,4 @@
 .prettierignore
 
 # ignores the README FILE
-/README.md
+.README.md

@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+*,
+::before, 
+::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Kumbh Sans', sans-serif;
+    position: relative;
+}
+.side-bar{
+    width: 50%;
+    height: 100%;
+    background: #ffffff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-100%);
+    padding: 20px 0 0 20px;
+    z-index: 999;
+    transition: all .3s ease-in-out;
+}
+.show-sidebar{
+    transform: translate(0);
+    overflow: hidden;
+}
+.cross-btn{
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+.side-bar ul.side-links{
+    list-style: none;
+}
+.side-bar ul.side-links li{
+    padding: 15px 0;
+}
+.side-bar ul.side-links a{
+    text-decoration: none;
+    color: rgb(93, 91, 91);
+    font-weight: bold;
+    transition: .3s linear;
+}
+.side-bar ul.side-links a:hover{
+    color: #000;
+}
+
+/* side bar ends here */
+
+header{
+    width: 85%;
+    height: 15vh;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+header::before{
+    content: '';
+    width: 100%;
+    height: 1px;
+    background: rgb(221, 221, 221);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: none;
+}
+/* nav{
+    
+} */
+
+/* .nav-center{
+
+} */
+
+.logo .fas{
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+ul.nav-links {
+    display: none;
+}
+.cart-section{
+    width: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cart-section .fas{
+    font-size: 1.2rem;
+    color: #5a5959;
+    cursor: pointer;
+}
+
+/* hero section */
+.hero-image{
+    width: 100%;
+    height: 70vh;
+    position: relative;
+    overflow: hidden;
+}
+.hero-slide-image{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: all .25s ease-in-out;
+}
+.hero-slide-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.btns-container{
+    width: 100%;
+    min-height: 70vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    padding: 0 20px;
+}
+
+.btns-container .fas{
+    font-size: 1.2rem;
+    padding: 10px;
+    background: #fff;
+    filter: opacity(0.8);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* we could add the slide image manually with css by using the code down below
+but we are using Javascript to add the fuctionality, that is why i commented it out
+*/
+
+/* .hero-slide-image:nth-child(1){
+    left: 0%;
+}
+.hero-slide-image:nth-child(2){
+    left: 100%;
+}
+.hero-slide-image:nth-child(3){
+    left: 200%;
+}
+.hero-slide-image:nth-child(4){
+    left: 300%;
+}
+.hero-slide-image{
+    transform: translateX(0%);
+} */
+
+.thumbnails{
+    display: none;
+}
+.product-desc-wrapper{
+    width: 85%;
+    margin: 35px auto 0;
+}
+.product-desc h3{
+    color: hsl(26, 100%, 55%);
+    margin-bottom: 15px;
+}
+.product-desc h1{
+    margin-bottom: 20px;
+}
+.product-desc p{
+    font-size: 1.2rem;
+    line-height: 2rem;
+    color: hsl(219, 9%, 45%);
+    margin-bottom: 30px;
+}
+.pricing-wrapper{
+    display: flex;
+    justify-content: space-between;  
+    align-items: center;
+    margin-bottom: 50px;
+}
+.pricing{
+    display: flex;
+    align-items: center;
+}
+.pricing span{
+    width: 70px;
+    padding: 5px;
+    background: hsl(25, 100%, 94%);
+    text-align: center;
+    margin-left: 25px;
+    border-radius: 5px;
+    color: hsl(26, 100%, 55%);
+}
+.promo{
+    color: #959393;
+    text-decoration: line-through;
+}
+.add-items{
+    width: 100%;
+    height: 7vh;
+    background: #dfdede;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    border-radius: 5px;
+}
+.add-items .fas{
+    color: hsl(26, 100%, 55%);
+    cursor: pointer;
+}
+#add-to-cart{
+    width: 100%;
+    height: 7vh;
+    margin-top: 10px;
+    outline: none;
+    border: none;
+    background: hsl(26, 100%, 55%);
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+button span{
+    margin-right: 15px;
+}
+
+
+
+/* media query section for bigger screens */
+
+@media screen and (min-width: 900px){
+    .nav-center{
+        display: flex;
+    }
+    .logo .fas{
+        display: none;
+    }
+    .side-bar{
+        display: none;
+    }
+    ul.nav-links{
+        display: flex;
+        text-align: center;
+        list-style: none;
+        margin-left: 80px;
+    }
+    ul.nav-links li{
+        width: 100px;
+    }
+    ul.nav-links li a{
+        text-decoration: none;
+        color: #000;
+        position: relative;  
+    }
+     ul.nav-links li a::before{
+        content: '';
+        width: 80px;
+        height: 5px;
+        background: hsl(26, 100%, 55%);
+        position: absolute;
+        bottom: -6vh;
+        left: 0;
+        display: none;
+    } 
+    ul.nav-links li a:hover::before{
+        display: block;
+        color: #000;
+    }
+    header::before{
+       display: block;
+    }
+    .container{
+        width: 80%;
+        min-height: 80vh;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+   
+    /* hero images and .thumbnails images */
+    .hero-image{
+        width: 400px;
+        height: 55vh;
+        border-radius: 10px;
+    }
+    .btns-container{
+       display: none;
+    }
+    .thumbnails{
+        display: block;
+    }
+    .thumbnails img{
+        width: 90px;
+        height: auto;
+        margin: 20px 10px 0 0;
+        object-fit: cover;
+        border: 2px solid hsl(26, 100%, 55%);
+        border-radius: 10px;
+        cursor: pointer;
+        
+    }
+    .product-desc-wrapper{
+        width: 500px;
+    }
+    .product-desc h3{
+        margin-bottom: 0;
+    }
+    .product-desc h1{
+        font-size: 3rem;
+    }
+    .pricing-wrapper{
+        justify-content: flex-start;  
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    .add-items{
+        width: 150px;
+    }
+    .items-to-add{
+        display: flex;
+        justify-content: space-between;
+    }
+    #add-to-cart{
+        width: 330px;
+        height: 7vh;
+        margin-top: 0;
+    }
+   
+}
